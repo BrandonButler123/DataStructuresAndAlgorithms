@@ -1,5 +1,6 @@
 public class MovieTheatre {
-    private String[][] seats = null;
+    private String[][] seats;
+
 
     // Setting up a two-dimensional array for theatre seating
     public MovieTheatre(int numberOfRows, int numberOfCols) {
@@ -37,6 +38,7 @@ public class MovieTheatre {
     public static void main(String[] args) {
         MovieTheatre movieTheatre = new MovieTheatre(10,10);
         movieTheatre.reserveSeat(2,2);
+        movieTheatre.reserveSeat(4,4);
         movieTheatre.displaySeating();
         System.out.println();
         movieTheatre.reserveSeat(2,2);
