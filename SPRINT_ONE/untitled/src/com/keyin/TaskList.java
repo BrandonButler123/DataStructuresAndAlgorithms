@@ -1,5 +1,4 @@
 package com.keyin;
-import java.util.List;
 
 public class TaskList {
 
@@ -35,21 +34,20 @@ public class TaskList {
     public boolean markTaskCompleted(String description){
         Node current = head;
         while (current != null) {
-            if (current.task.getDescription().equals(description)) {
+            if (current.task.getDescription() != null && current.task.getDescription().equals(description)) {
                 current.task.markTaskCompleted();
                 return true;
             }
             current = current.next;
         }
-        return false;
+        return false; // task not found
     }
 
-    public User printAllTasks() {
+    public void printAllTasks() {
         Node current = head;
         while (current != null) {
             System.out.println(current.task);
             current = current.next;
         }
-        return null;
     }
 }

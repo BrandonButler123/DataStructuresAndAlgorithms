@@ -1,7 +1,6 @@
 package com.keyin;
 
 public class Task {
-
     public String description;
     public boolean isCompleted;
 
@@ -9,19 +8,7 @@ public class Task {
         return description;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public boolean isCompleted() {
-        return isCompleted;
-    }
-
-    public void setCompleted(boolean completed) {
-        isCompleted = completed;
-    }
-
-    public Task() {
+    public Task(String description) {
         this.description = description;
         this.isCompleted = false;
     }
